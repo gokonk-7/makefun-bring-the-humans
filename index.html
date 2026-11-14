@@ -79,14 +79,14 @@
 
   /* Hero */
   .main { flex: 1; }
-  .hero { display: grid; gap: var(--space-32); padding-block: var(--space-24) var(--space-32); }
+  .hero { display: grid; gap: var(--space-32); padding-block: var(--space-32) var(--space-48); }
   @media (min-width: 900px) {
     .hero { grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr); gap: var(--space-48); align-items: center; padding-block: var(--space-32) var(--space-48); }
     .shell { padding-left: max(var(--space-48), env(safe-area-inset-left, 0px)); padding-right: max(var(--space-48), env(safe-area-inset-right, 0px)); }
   }
   .eyebrow {
     margin: 0 0 var(--space-12); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent);
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
   }
   h1 {
     margin: 0; max-width: 17ch; font-family: var(--font-display);
@@ -98,7 +98,7 @@
   @media (max-width: 359px) { .lede { font-size: 16px; } }
   .cta {
     position: relative; display: inline-flex; align-items: center; justify-content: center;
-    min-height: 54px; margin-top: var(--space-32); padding: var(--space-16) var(--space-32);
+    min-height: 56px; margin-top: var(--space-32); padding: var(--space-16) var(--space-32);
     border-radius: var(--radius-control); background: var(--accent); color: var(--on-accent);
     font-size: 16px; font-weight: 600; line-height: 1; text-decoration: none;
     transition: background-color var(--duration-quick) var(--ease-decelerate);
@@ -149,9 +149,9 @@
     background: var(--surface);
   }
   .steps .num {
-    display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;
+    display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;
     border-radius: 50%; background: var(--accent); color: var(--on-accent);
-    font-size: 14px; font-weight: 700; margin-bottom: var(--space-12);
+    font-size: 15px; font-weight: 700; margin-bottom: var(--space-12);
   }
   .steps h3 { margin: 0 0 var(--space-8); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
   .steps p { margin: 0; font-size: 15px; color: var(--secondary); }
@@ -164,11 +164,11 @@
     border-radius: var(--radius-surface); background: var(--surface);
   }
   .bounties .name { font-size: 15px; font-weight: 600; }
-  .bounties .prize { font-size: 15px; font-weight: 700; color: var(--reward); white-space: nowrap; }
+  .bounties .prize { font-size: 16px; font-weight: 700; color: var(--reward); white-space: nowrap; }
   .winners { display: grid; gap: var(--space-12); margin: 0; padding: 0; list-style: none; }
   @media (min-width: 700px) { .winners { grid-template-columns: repeat(3, 1fr); } }
   .winners li {
-    padding: var(--space-24); border: 1px solid var(--hairline); border-radius: var(--radius-surface);
+    padding: var(--space-24) var(--space-32); border: 1px solid var(--hairline); border-radius: var(--radius-surface);
     background: var(--surface); font-size: 15px; color: var(--secondary);
   }
   .winners strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: var(--space-4); }
@@ -192,12 +192,14 @@
     letter-spacing: -0.03em; color: var(--reward); margin-bottom: var(--space-8);
   }
   .money-grid p { margin: 0; font-size: 15px; color: var(--secondary); }
+  .money-note { margin: var(--space-24) 0 0; font-size: 14px; color: var(--secondary); }
+  .money-note strong { color: var(--ink); }
 
   .cta-band {
     text-align: center; padding-block: var(--space-48); border-top: 1px solid var(--hairline);
   }
   .cta-band h2 {
-    margin: 0 auto; max-width: 24ch; font-family: var(--font-display); font-size: 32px;
+    margin: 0 auto; max-width: 24ch; font-family: var(--font-display); font-size: 34px;
     line-height: 1.1; font-weight: 700; letter-spacing: -0.03em; text-wrap: balance;
   }
   .cta-band p { margin: var(--space-16) auto 0; max-width: 58ch; color: var(--secondary); }
@@ -291,6 +293,7 @@
       <li><span class="big">100%</span><p>Of each bounty&rsquo;s reward sits in escrow from the moment it opens.</p></li>
       <li><span class="big">$0</span><p>The cost of entering. Free signups, free entries, never a stake.</p></li>
     </ul>
+    <p class="money-note"><strong>Verify it yourself:</strong> every escrow address is public, so anyone can confirm the funds on Solana before entering.</p>
   </section>
 
   <section class="block shell" aria-labelledby="join-title">
